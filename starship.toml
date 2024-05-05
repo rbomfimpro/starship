@@ -122,18 +122,18 @@ style    = "#f39c12"
 [git_status]
 disabled   = false
 conflicted = "[󰈻](#c0392b)"
-ahead      = "󱦲$count"
-behind     = "󱦳$count"
-diverged   = "󱦲${ahead_count}󱦳${behind_count}"
+ahead      = "[󱦲](#4bcffa)$count"
+behind     = "[󱦳](#4bcffa)$count"
+diverged   = "[󱦲](#4bcffa)${ahead_count}[󱦳](#4bcffa)${behind_count}"
 up_to_date = ""
-untracked  = " [?](#f8c291)$count"
-stashed    = " $count "
+untracked  = "[?](#FD7272)$count"
+stashed    = "[ ](#9b59b6)$count "
 modified   = "[](#f1c40f)$count"
-staged     = "[+](#2ecc71)$count"
+staged     = "[+](#16a085)$count"
 renamed    = "[󱦰](#3498db)$count"
 deleted    = "[-](#c0392b)$count"
 format     = "([$all_status$ahead_behind]($style) )"
-style      = "#d35400"
+style      = "#ecf0f1"
 
 
 #################################################

@@ -1,0 +1,203 @@
+#################################################
+# Module - Prompt (Format)
+#################################################
+
+format = """
+$os\
+$directory\
+$git_branch$git_status\
+$character"""
+
+right_format = """
+$sudo\
+$aws\
+$kubernetes\
+$terraform\
+$time\
+$battery"""
+
+
+#################################################
+# Module - Prompt (Settings)
+#################################################
+
+command_timeout = 1000
+
+[line_break]
+disabled = true
+
+[character]
+disabled       = false
+format         = "$symbol "
+success_symbol = "[❯](#e84393)"
+error_symbol   = "[❯](#eb2f06)"
+vimcmd_symbol  = "[❮](#2ecc71)"
+
+
+#################################################
+# Module - OS
+#################################################
+
+[os]
+disabled = false
+format   = "[$symbol]($style) "
+style    = "bold #2e86de"
+
+[os.symbols]
+Alpine           = " "
+Amazon           = " "
+Android          = " "
+Arch             = " "
+Debian           = " "
+Fedora           = " "
+FreeBSD          = " "
+Gentoo           = " "
+Kali             = " "
+Linux            = " "
+Macos            = " "
+Manjaro          = " "
+Mint             = " "
+openSUSE         = " "
+Pop              = " "
+Raspbian         = " "
+Redhat           = " "
+RedHatEnterprise = " "
+RockyLinux       = " "
+SUSE             = " "
+Ubuntu           = " "
+Windows          = "󰍲 "
+
+
+#################################################
+# Modules - Core
+#################################################
+
+[directory]
+disabled  = false
+read_only = " 󰌾"
+style     = "bold #2980b9"
+
+[sudo]
+disabled = false
+symbol   = "  "
+format   = "[$symbol]($style)"
+style    = "bold #f1c40f"
+
+[time]
+disabled        = false
+format          = "  [󱑎 $time]($style)"
+style           = "#576574"
+time_format     = "%H:%M"
+utc_time_offset = "-3"
+
+[battery]
+disabled           = false
+full_symbol        = " 󰁹"
+charging_symbol    = " 󰂄"
+discharging_symbol = " 󰂃"
+empty_symbol       = " 󰂎"
+unknown_symbol     = " 󰂑"
+format             = "[$symbol]($style)"
+
+[[battery.display]]
+threshold          = 30
+discharging_symbol = " 󰁼"
+style              = "#e67e22"
+
+[[battery.display]]
+threshold          = 10
+discharging_symbol = " 󰁺"
+style              = "#e74c3c"
+
+
+#################################################
+# Modules - Git
+#################################################
+
+[git_branch]
+disabled = false
+symbol   = " "
+style    = "#f39c12"
+
+[git_status]
+disabled   = false
+conflicted = "[󰈻](#c0392b)"
+ahead      = "󱦲$count"
+behind     = "󱦳$count"
+diverged   = "󱦲${ahead_count}󱦳${behind_count}"
+up_to_date = ""
+untracked  = " [?](#f8c291)$count"
+stashed    = " $count "
+modified   = "[](#f1c40f)$count"
+staged     = "[+](#2ecc71)$count"
+renamed    = "[󱦰](#3498db)$count"
+deleted    = "[-](#c0392b)$count"
+format     = "([$all_status$ahead_behind]($style) )"
+style      = "#d35400"
+
+
+#################################################
+# Modules - Essential
+#################################################
+
+[aws]
+disabled = false
+symbol   = "  "
+style    = "#d35400"
+
+[hostname]
+disabled   = false
+ssh_symbol = "󰣀 "
+
+[kubernetes]
+disabled = false
+symbol   = "󱃾 "
+format   = "[$symbol$context( ($namespace))]($style)"
+style    = "#60a3bc"
+
+[terraform]
+disabled = false
+symbol   = " 󱁢"
+format   = "[$symbol $version]($style)"
+style    = "#8854d0"
+
+[python]
+disabled = false
+symbol   = " "
+
+
+#################################################
+# Modules - General
+#################################################
+
+[golang]
+disabled = false
+symbol   = " "
+
+[java]
+disabled = false
+symbol   = " "
+
+[nodejs]
+disabled = false
+symbol   = " "
+
+[package]
+disabled = false
+symbol   = "󰏗 "
+
+[perl]
+disabled = false
+symbol   = " "
+
+[php]
+disabled = false
+symbol   = " "
+
+[ruby]
+disabled = false
+symbol   = " "
+
+[rust]
+disabled = false
+symbol   = " "

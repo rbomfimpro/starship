@@ -3,13 +3,13 @@
 #################################################
 
 format = """
+$sudo\
 $os\
 $directory\
 $git_branch$git_status\
 $character"""
 
 right_format = """
-$sudo\
 $aws\
 $kubernetes\
 $terraform\
@@ -79,7 +79,7 @@ style     = "bold #2980b9"
 
 [sudo]
 disabled = false
-symbol   = "  "
+symbol   = " "
 format   = "[$symbol]($style)"
 style    = "bold #f1c40f"
 
@@ -103,11 +103,6 @@ format             = "[$symbol]($style)"
 threshold          = 30
 discharging_symbol = " 󰁼"
 style              = "#e67e22"
-
-[[battery.display]]
-threshold          = 10
-discharging_symbol = " 󰁺"
-style              = "#e74c3c"
 
 
 #################################################
@@ -143,7 +138,13 @@ style      = "#ecf0f1"
 [aws]
 disabled = false
 symbol   = "  "
+format   = "[$symbol$profile  $region  ]($style)"
 style    = "#d35400"
+
+[aws.region_aliases]
+us-east-1 = 'use1'
+us-east-2 = 'use2'
+sa-east-1 = 'sae1'
 
 [hostname]
 disabled   = false

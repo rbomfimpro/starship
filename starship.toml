@@ -138,7 +138,7 @@ style      = "#ecf0f1"
 [aws]
 disabled = false
 symbol   = "  "
-format   = "[$symbol$profile  $region  ]($style)"
+format   = "[$symbol$profile  ]($style)"
 style    = "#d35400"
 
 [aws.region_aliases]
